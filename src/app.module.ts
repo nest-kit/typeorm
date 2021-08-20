@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CommentEntity } from './entities/comment.entity';
 import { UserEntity } from './entities/user.entity';
 import { PostEntity } from './entities/post.entity';
+import { BasicModule } from './modules/basic/basic.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { PostEntity } from './entities/post.entity';
     // 批量创建数据，查询数据
     // 内包含分批处理数据（通常会配合列队）
     InitDbModule,
+    BasicModule,
   ],
   controllers: [],
   providers: [],
